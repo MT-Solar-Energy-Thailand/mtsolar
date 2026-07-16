@@ -1,0 +1,6539 @@
+/* =====================================================
+   MT SOLAR ENERGY
+   CORE 1 : FOUNDATION + HEADER
+   Refactored CSS 2026
+===================================================== */
+
+
+/* =====================================================
+   ROOT VARIABLES
+===================================================== */
+
+:root{
+
+    --primary:#1d4ed8;
+    --primary-dark:#003b5c;
+
+    --secondary:#0bb901;
+
+    --text:#1e293b;
+    --dark:#0f172a;
+
+    --gray:#64748b;
+    --light:#f8fbff;
+
+    --white:#ffffff;
+
+    --border:#dbeafe;
+
+    --shadow:
+    0 10px 35px rgba(0,0,0,.08);
+
+    --radius-xl:35px;
+    --radius-lg:25px;
+    --radius-md:18px;
+
+    --transition:.3s ease;
+
+}
+
+
+
+/* =====================================================
+   GLOBAL RESET
+===================================================== */
+
+
+*,
+*::before,
+*::after{
+
+    margin:0;
+    padding:0;
+
+    box-sizing:border-box;
+
+    
+
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+body{
+
+    background:#fff;
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+}
+
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+ul{
+
+    list-style:none;
+
+}
+
+
+img{
+
+    max-width:100%;
+
+    height:auto;
+
+    display:block;
+
+}
+
+
+
+/* =====================================================
+   CONTAINER SYSTEM
+===================================================== */
+
+
+.container{
+
+    width:min(92%,1400px);
+
+    margin-inline:auto;
+
+}
+
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+
+.header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:999;
+
+
+    background:
+    rgba(255,255,255,.95);
+
+
+    backdrop-filter:
+    blur(20px);
+
+
+    box-shadow:
+    0 2px 20px rgba(0,0,0,.05);
+
+}
+
+
+
+.navbar{
+
+    min-height:90px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:30px;
+
+}
+
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+
+.logo{
+
+    flex-shrink:0;
+
+}
+
+
+.logo img{
+
+    width:auto;
+
+    height:58px;
+
+    object-fit:contain;
+
+}
+
+
+
+/* =====================================================
+   MAIN MENU
+===================================================== */
+
+
+.menu{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:clamp(18px,2vw,30px);
+
+
+    flex:1;
+
+}
+
+
+
+.menu li{
+
+    position:relative;
+
+}
+
+
+
+.menu li a{
+
+    color:var(--dark);
+
+    font-size:15px;
+
+    font-weight:600;
+
+
+    transition:
+    var(--transition);
+
+}
+
+
+
+.menu li a:hover,
+.menu li a.active{
+
+
+    color:var(--primary);
+
+}
+
+
+
+/* =====================================================
+   DROPDOWN
+===================================================== */
+
+
+.dropdown{
+
+    position:relative;
+
+}
+
+
+
+.dropdown-menu{
+
+    position:absolute;
+
+    top:calc(100% + 15px);
+
+    left:0;
+
+
+    min-width:340px;
+
+
+    background:white;
+
+
+    border-radius:20px;
+
+
+    padding:15px 0;
+
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.15);
+
+
+
+    opacity:0;
+
+    visibility:hidden;
+
+
+    transform:
+    translateY(10px);
+
+
+    transition:
+    var(--transition);
+
+
+
+    max-height:500px;
+
+    overflow-y:auto;
+
+
+    z-index:999;
+
+}
+
+
+
+.dropdown:hover 
+.dropdown-menu{
+
+
+    opacity:1;
+
+    visibility:visible;
+
+
+    transform:
+    translateY(0);
+
+}
+
+
+
+.dropdown-menu li{
+
+    width:100%;
+
+}
+
+
+
+.dropdown-menu li a{
+
+
+    display:block;
+
+
+    padding:
+
+    14px 35px;
+
+
+    color:#1f2937;
+
+
+    font-size:16px;
+
+
+    font-weight:500;
+
+
+    line-height:1.5;
+
+
+    transition:
+    var(--transition);
+
+}
+
+
+
+.dropdown-menu li a:hover{
+
+
+    background:#e0ecff;
+
+
+    color:var(--primary);
+
+
+    padding-left:45px;
+
+
+}
+
+
+/* contact dropdown */
+
+.contact-menu li{
+
+    margin:0;
+
+    padding:0;
+
+}
+
+
+
+
+/* =====================================================
+   HEADER RIGHT
+===================================================== */
+
+
+.header-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    flex-shrink:0;
+
+}
+
+
+
+/* =====================================================
+   QUOTE BUTTON
+===================================================== */
+
+
+.quote-btn{
+
+
+    background:
+    linear-gradient(
+    135deg,
+    #1d4ed8,
+    #2563eb
+    );
+
+
+    color:white;
+
+
+    padding:
+
+    14px 24px;
+
+
+    border-radius:50px;
+
+
+    font-size:14px;
+
+
+    font-weight:700;
+
+
+    transition:
+    var(--transition);
+
+
+}
+
+
+
+.quote-btn:hover{
+
+
+    transform:
+    translateY(-3px);
+
+
+}
+
+
+
+/* =====================================================
+   BRANCH BUTTON
+===================================================== */
+
+
+.branch-box{
+
+    position:relative;
+
+}
+
+
+
+.branch-btn{
+
+
+    border:none;
+
+
+    background:#f1f5f9;
+
+
+    padding:
+
+    13px 18px;
+
+
+    border-radius:50px;
+
+
+    cursor:pointer;
+
+
+    font-weight:600;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:10px;
+
+
+}
+
+
+
+.branch-menu{
+
+
+    right:0;
+
+    left:auto;
+
+
+}
+
+
+
+/* =====================================================
+   SOCIAL ICON
+===================================================== */
+
+
+.social-icon{
+
+
+    width:36px;
+
+    height:36px;
+
+
+    border-radius:50%;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    color:white;
+
+
+    font-size:14px;
+
+
+    transition:
+    var(--transition);
+
+
+}
+
+
+
+.facebook{
+
+    background:#1877F2;
+
+}
+
+
+
+.line{
+
+    background:#00B900;
+
+}
+
+
+
+.phone{
+
+    background:#0f172a;
+
+}
+
+
+
+.map{
+
+    background:#ef4444;
+
+}
+
+
+
+.social-icon:hover{
+
+
+    transform:
+    translateY(-3px);
+
+
+}
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+
+    display:flex;
+
+    align-items:center;
+
+
+    overflow:hidden;
+
+
+    padding-top:90px;
+
+}
+
+
+
+/* Background Image */
+
+
+.hero-bg{
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    background-image:url(
+    'https://greenpowersolar.co.th/wp-content/uploads/2023/11/energy-research-institute-1440x900-1-1024x640-1.jpg'
+    );
+
+
+    background-size:cover;
+
+
+    background-position:center;
+
+
+    opacity:.2;
+
+
+    transform:scale(1.05);
+
+
+}
+
+
+
+/* Overlay */
+
+
+.hero::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        rgb(5,9,105),
+
+        rgba(27,63,139,.85),
+
+        rgba(255,255,255,.35)
+
+    );
+
+
+}
+
+
+
+/* Hero Content */
+
+
+.hero-content{
+
+
+    position:relative;
+
+
+    z-index:5;
+
+
+    width:100%;
+
+
+}
+
+
+
+/* Text */
+
+
+.hero-text{
+
+
+    max-width:750px;
+
+
+    color:white;
+
+
+}
+
+
+
+/* Logo Hero */
+
+
+.hero-logo{
+
+
+    position:absolute;
+
+
+    top:80px;
+
+
+    right:30px;
+
+
+    width:clamp(120px,15vw,220px);
+
+
+    height:auto;
+
+
+    z-index:20;
+
+
+}
+
+
+
+/* Badge */
+
+
+.badge{
+
+
+    display:inline-flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    padding:
+
+    10px 28px;
+
+
+    border-radius:50px;
+
+
+    background:
+
+    var(--secondary);
+
+
+    color:white;
+
+
+    font-size:14px;
+
+
+    font-weight:700;
+
+
+    letter-spacing:1px;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+/* Hero Title */
+
+
+.hero-text h1{
+
+
+    font-size:
+
+    clamp(2.4rem,5vw,3.9rem);
+
+
+    line-height:1.15;
+
+
+    font-weight:800;
+
+
+    margin-bottom:30px;
+
+
+    max-width:1000px;
+
+
+}
+
+
+
+/* Thai title */
+
+
+.thai-title{
+
+
+    font-size:
+
+    clamp(2rem,4vw,2.5rem)
+    !important;
+
+
+    line-height:1.2;
+
+
+}
+
+
+
+/* English title */
+
+
+.eng-title{
+
+
+    font-size:
+
+    clamp(3rem,6vw,4.5rem);
+
+
+    font-weight:800;
+
+
+    line-height:1.1;
+
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+/* Description */
+
+
+.hero-text p{
+
+
+    font-size:
+
+    clamp(1rem,2vw,1.25rem);
+
+
+    line-height:1.8;
+
+
+    margin-bottom:45px;
+
+
+    color:white;
+
+
+}
+
+
+
+/* =====================================================
+   HERO BUTTON
+===================================================== */
+
+
+.hero-buttons{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    flex-wrap:wrap;
+
+
+    gap:15px;
+
+
+}
+
+
+
+/* Main Button */
+
+
+.primary-btn{
+
+
+    background:white;
+
+
+    color:#0014f1;
+
+
+    padding:
+
+    18px 32px;
+
+
+    border-radius:50px;
+
+
+    font-weight:700;
+
+
+    transition:
+    var(--transition);
+
+
+}
+
+
+
+.primary-btn:hover{
+
+
+    transform:
+    translateY(-3px);
+
+
+}
+
+
+
+/* Video Button */
+
+
+.video-btn{
+
+
+    color:white;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:15px;
+
+
+    font-weight:700;
+
+
+}
+
+
+
+.video-btn i{
+
+
+    width:55px;
+
+
+    height:55px;
+
+
+    border-radius:50%;
+
+
+    background:
+
+    rgba(255,255,255,.15);
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    backdrop-filter:blur(20px);
+
+
+}
+
+
+
+/* =====================================================
+   STATS SECTION
+===================================================== */
+
+
+.stats{
+
+
+    margin-top:-80px;
+
+
+    position:relative;
+
+
+    z-index:50;
+
+
+}
+
+
+
+.stats-box{
+
+
+    background:white;
+
+
+    border-radius:var(--radius-xl);
+
+
+    padding:
+
+    50px;
+
+
+    box-shadow:
+
+
+    0 20px 70px rgba(0,0,0,.08);
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(4,1fr);
+
+
+    gap:30px;
+
+
+}
+
+
+
+.stat-item{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    gap:20px;
+
+
+    text-align:left;
+
+
+    position:relative;
+
+
+}
+
+
+
+.stat-item:not(:last-child)::after{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    right:-15px;
+
+
+    width:2px;
+
+
+    height:70px;
+
+
+    background:#0048ff;
+
+
+    opacity:.7;
+
+
+}
+
+
+
+/* Icon */
+
+
+.stat-icon{
+
+
+    width:62px;
+
+
+    height:62px;
+
+
+    flex-shrink:0;
+
+
+    border-radius:50%;
+
+
+    background:#dbeafe;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+}
+
+
+
+.stat-icon i{
+
+    font-size:30px;
+
+    color:#2563eb;
+
+}
+
+
+.service-icon i{
+
+    font-size:42px;
+
+    color:#2563eb;
+
+}
+
+
+.slide-btn i{
+
+    pointer-events:none;
+
+}
+
+
+
+/* Text */
+
+
+.stat-text h3{
+
+
+    font-size:20px;
+
+
+    font-weight:700;
+
+
+    color:#2563eb;
+
+
+    margin-bottom:8px;
+
+
+}
+
+
+
+.stat-text p{
+
+
+    font-size:15px;
+
+
+    line-height:1.5;
+
+
+    color:#1e293b;
+
+
+}
+
+
+
+/* =====================================================
+   HERO + STATS RESPONSIVE
+===================================================== */
+
+
+@media(max-width:1200px){
+
+
+    .hero-logo{
+
+
+        right:20px;
+
+
+    }
+
+
+    .stats-box{
+
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+
+
+    }
+
+
+}
+
+
+
+@media(max-width:900px){
+
+
+    .hero{
+
+
+        min-height:auto;
+
+
+        padding:
+
+        140px 0 100px;
+
+
+    }
+
+
+    .hero-text{
+
+
+        max-width:100%;
+
+
+        text-align:center;
+
+
+    }
+
+
+
+    .hero-logo{
+
+
+        opacity:.35;
+
+
+        top:100px;
+
+
+        right:50%;
+
+
+        transform:translateX(50%);
+
+
+    }
+
+
+
+    .hero-buttons{
+
+
+        justify-content:center;
+
+
+    }
+
+
+    .stats{
+
+
+        margin-top:-40px;
+
+
+    }
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+    .hero-buttons{
+
+
+        flex-direction:column;
+
+
+    }
+
+
+
+    .primary-btn{
+
+
+        width:100%;
+
+
+        text-align:center;
+
+
+    }
+
+
+    .stats-box{
+
+
+        grid-template-columns:1fr;
+
+
+        padding:30px 20px;
+
+
+    }
+
+
+
+    .stat-item{
+
+
+        justify-content:flex-start;
+
+
+    }
+
+
+
+    .stat-item:not(:last-child)::after{
+
+
+        display:none;
+
+
+    }
+
+
+}
+
+/* =====================================================
+   CORE 2 PART A
+   SERVICES SECTION
+===================================================== */
+
+
+/* =====================================================
+   SERVICES
+===================================================== */
+
+
+.services{
+
+
+    padding:
+
+    clamp(70px,10vw,120px) 0;
+
+
+    background:#f8fbff;
+
+
+}
+
+
+
+.services-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    1fr 1.2fr;
+
+
+    gap:
+
+    clamp(40px,6vw,80px);
+
+
+    align-items:center;
+
+
+}
+
+
+
+/* =====================================================
+   SERVICES LEFT
+===================================================== */
+
+
+.services-left span{
+
+
+    color:var(--primary);
+
+
+    font-weight:700;
+
+
+    text-transform:uppercase;
+
+
+    letter-spacing:1px;
+
+
+}
+
+
+
+.services-left h2{
+
+
+    font-size:
+
+    clamp(2rem,4vw,2.8rem);
+
+
+    line-height:1.2;
+
+
+    margin:
+
+    20px 0;
+
+
+    color:var(--dark);
+
+
+}
+
+
+
+.services-left p{
+
+
+    color:var(--gray);
+
+
+    line-height:1.9;
+
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+/* Button */
+
+
+.services-left a{
+
+
+    display:inline-flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    padding:
+
+    16px 28px;
+
+
+    border-radius:50px;
+
+
+    background:var(--primary);
+
+
+    color:white;
+
+
+    font-weight:700;
+
+
+    transition:
+
+    var(--transition);
+
+
+}
+
+
+
+.services-left a:hover{
+
+
+    transform:
+
+    translateY(-3px);
+
+
+    box-shadow:
+
+    0 10px 25px rgba(29,78,216,.25);
+
+
+}
+
+
+
+
+/* =====================================================
+   SERVICES CARD AREA
+===================================================== */
+
+
+.services-right{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+
+    gap:30px;
+
+
+}
+
+
+
+
+
+/* =====================================================
+   SERVICE CARD
+===================================================== */
+
+
+.service-card{
+
+
+    background:white;
+
+
+    border-radius:
+
+    var(--radius-xl);
+
+
+    padding:
+
+    45px;
+
+
+    box-shadow:
+
+
+    0 10px 30px rgba(0,0,0,.05);
+
+
+    transition:
+
+    var(--transition);
+
+
+    overflow:hidden;
+
+
+    position:relative;
+
+
+}
+
+
+
+.service-card::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    top:0;
+
+
+    left:0;
+
+
+    width:100%;
+
+
+    height:5px;
+
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        #1d4ed8,
+
+        #0bb901
+
+    );
+
+
+    transform:
+
+    scaleX(0);
+
+
+    transform-origin:left;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.service-card:hover::before{
+
+
+    transform:
+
+    scaleX(1);
+
+
+}
+
+
+
+.service-card:hover{
+
+
+    transform:
+
+    translateY(-10px);
+
+
+    box-shadow:
+
+
+    0 20px 40px rgba(37,99,235,.15);
+
+
+}
+
+
+
+/* =====================================================
+   SERVICE ICON
+===================================================== */
+
+
+.service-icon{
+
+
+    width:80px;
+
+
+    height:80px;
+
+
+    border-radius:20px;
+
+
+    background:#edf4ff;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    margin-bottom:25px;
+
+
+    transition:
+
+    var(--transition);
+
+
+}
+
+
+
+.service-icon i{
+
+
+    font-size:42px;
+
+
+    color:var(--primary);
+
+
+    transition:
+
+    var(--transition);
+
+
+}
+
+
+
+.service-card:hover .service-icon{
+
+
+    background:
+
+    var(--primary);
+
+
+    transform:
+
+    translateY(-5px);
+
+
+}
+
+
+
+.service-card:hover .service-icon i{
+
+
+    color:white;
+
+
+}
+
+
+
+/* =====================================================
+   SERVICE TEXT
+===================================================== */
+
+
+.service-card h3{
+
+
+    font-size:
+
+    22px;
+
+
+    font-weight:700;
+
+
+    color:var(--dark);
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+.service-card p{
+
+
+    color:var(--gray);
+
+
+    line-height:1.8;
+
+
+    font-size:17px;
+
+
+}
+
+
+
+/* List Inside Card */
+
+
+.service-card ul{
+
+
+    padding:0;
+
+
+    margin-top:18px;
+
+
+    list-style:none;
+
+
+}
+
+
+
+.service-card li{
+
+
+    list-style:none;
+
+
+    color:#6b7280;
+
+
+    font-size:17px;
+
+
+    line-height:2;
+
+
+    margin-bottom:8px;
+
+
+}
+
+
+
+.service-card li i{
+
+
+    color:var(--primary);
+
+
+    margin-right:8px;
+
+
+    font-size:15px;
+
+
+}
+
+
+
+/* =====================================================
+   SERVICES RESPONSIVE
+===================================================== */
+
+
+@media(max-width:992px){
+
+
+    .services-grid{
+
+
+        grid-template-columns:1fr;
+
+
+    }
+
+
+    .services-left{
+
+
+        text-align:center;
+
+
+    }
+
+
+}
+
+
+
+@media(max-width:700px){
+
+
+    .services-right{
+
+
+        grid-template-columns:1fr;
+
+
+    }
+
+
+    .service-card{
+
+
+        padding:35px 25px;
+
+
+    }
+
+
+}
+
+/* =====================================================
+   CORE 2 PART B
+   PROJECTS SECTION
+===================================================== */
+
+
+/* =====================================================
+   PROJECTS
+===================================================== */
+
+
+.projects{
+
+
+    padding:
+
+    clamp(70px,10vw,120px) 0;
+
+
+    background:white;
+
+
+}
+
+
+
+/* =====================================================
+   PROJECT TITLE
+===================================================== */
+
+
+.projects h2{
+
+
+    text-align:center;
+
+
+    font-size:
+
+    clamp(2rem,4vw,3rem);
+
+
+    line-height:1.2;
+
+
+    color:var(--dark);
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+/* Description */
+
+
+.projects > .container > p{
+
+
+    text-align:center;
+
+
+    max-width:700px;
+
+
+    margin:
+
+    0 auto 60px;
+
+
+    color:var(--gray);
+
+
+    line-height:1.8;
+
+
+}
+
+
+
+/* =====================================================
+   PROJECT GRID
+===================================================== */
+
+
+.project-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(4,1fr);
+
+
+    gap:25px;
+
+
+}
+
+
+
+/* =====================================================
+   PROJECT CARD
+===================================================== */
+
+
+.project-card{
+
+
+    background:white;
+
+
+    border-radius:
+
+    var(--radius-lg);
+
+
+    overflow:hidden;
+
+
+    box-shadow:
+
+
+    0 10px 35px rgba(0,0,0,.06);
+
+
+    transition:
+
+    var(--transition);
+
+
+}
+
+
+
+.project-card:hover{
+
+
+    transform:
+
+    translateY(-8px);
+
+
+    box-shadow:
+
+
+    0 20px 45px rgba(0,0,0,.12);
+
+
+}
+
+
+
+/* =====================================================
+   PROJECT IMAGE
+===================================================== */
+
+
+.project-card img{
+
+
+    width:100%;
+
+
+    height:260px;
+
+
+    object-fit:cover;
+
+
+    transition:
+
+    .5s ease;
+
+
+}
+
+
+
+.project-card:hover img{
+
+
+    transform:
+
+    scale(1.05);
+
+
+}
+
+
+
+/* =====================================================
+   PROJECT INFO
+===================================================== */
+
+
+.project-info{
+
+
+    padding:
+
+    25px;
+
+
+}
+
+
+
+.project-info h3{
+
+
+    color:var(--dark);
+
+
+    font-size:20px;
+
+
+    font-weight:700;
+
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+.project-info span{
+
+
+    color:var(--gray);
+
+
+    font-size:15px;
+
+
+}
+
+
+
+
+
+/* =====================================================
+   PROJECT RESPONSIVE
+===================================================== */
+
+
+@media(max-width:1200px){
+
+
+    .project-grid{
+
+
+        grid-template-columns:
+
+        repeat(3,1fr);
+
+
+    }
+
+
+}
+
+
+
+@media(max-width:900px){
+
+
+    .project-grid{
+
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+
+
+    }
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+    .project-grid{
+
+
+        grid-template-columns:
+
+        1fr;
+
+
+    }
+
+
+
+    .project-card img{
+
+
+        height:220px;
+
+
+    }
+
+
+}
+
+/* =====================================================
+   CORE 3 PART A
+   FOOTER SECTION
+===================================================== */
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+
+footer{
+
+
+    background:#071225;
+
+
+    color:white;
+
+
+    padding-top:
+
+    90px;
+
+
+}
+
+
+
+/* =====================================================
+   FOOTER GRID
+===================================================== */
+
+
+.footer-grid{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    2fr 1fr 1fr 1fr 1.5fr;
+
+
+    gap:
+
+    50px;
+
+
+    padding-bottom:
+
+    70px;
+
+
+}
+
+
+
+/* =====================================================
+   FOOTER LOGO
+===================================================== */
+
+
+.footer-logo{
+
+
+    width:
+
+    180px;
+
+
+    margin-bottom:
+
+    25px;
+
+
+}
+
+
+
+/* =====================================================
+   FOOTER TEXT
+===================================================== */
+
+
+.footer-grid p{
+
+
+    color:#e5e7eb;
+
+
+    line-height:
+
+    1.9;
+
+
+    font-size:15px;
+
+
+}
+
+
+
+/* =====================================================
+   FOOTER TITLE
+===================================================== */
+
+
+.footer-grid h4{
+
+
+    margin-bottom:
+
+    25px;
+
+
+    font-size:
+
+    18px;
+
+
+    font-weight:700;
+
+
+    color:white;
+
+
+}
+
+
+
+/* =====================================================
+   FOOTER LINKS
+===================================================== */
+
+
+.footer-grid ul li{
+
+
+    margin-bottom:
+
+    15px;
+
+
+    color:#ffffff;
+
+
+    cursor:pointer;
+
+
+    transition:
+
+    var(--transition);
+
+
+}
+
+
+
+.footer-grid ul li:hover{
+
+
+    color:#60a5fa;
+
+
+    transform:
+
+    translateX(5px);
+
+
+}
+
+
+
+/* =====================================================
+   FOOTER CONTACT
+===================================================== */
+
+
+.footer-grid a{
+
+
+    color:white;
+
+
+    transition:
+
+    var(--transition);
+
+
+}
+
+
+
+.footer-grid a:hover{
+
+
+    color:#60a5fa;
+
+
+}
+
+
+
+/* =====================================================
+   COPYRIGHT
+===================================================== */
+
+
+.copyright{
+
+
+    border-top:
+
+    1px solid rgba(255,255,255,.08);
+
+
+    text-align:center;
+
+
+    padding:
+
+    25px 0;
+
+
+    color:#94a3b8;
+
+
+    font-size:
+
+    14px;
+
+
+}
+
+
+
+/* =====================================================
+   FOOTER RESPONSIVE
+===================================================== */
+
+
+@media(max-width:1200px){
+
+
+    .footer-grid{
+
+
+        grid-template-columns:
+
+        repeat(3,1fr);
+
+
+    }
+
+
+}
+
+
+
+@media(max-width:800px){
+
+
+    .footer-grid{
+
+
+        grid-template-columns:
+
+        repeat(2,1fr);
+
+
+        gap:35px;
+
+
+    }
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+    footer{
+
+
+        padding-top:
+
+        60px;
+
+
+    }
+
+
+    .footer-grid{
+
+
+        grid-template-columns:
+
+        1fr;
+
+
+        text-align:center;
+
+
+    }
+
+
+
+    .footer-logo{
+
+
+        margin-inline:auto;
+
+
+    }
+
+
+}
+
+/* =====================================================
+   CORE 3 PART B
+   QUOTE PAGE + FORM
+===================================================== */
+
+
+/* =====================================================
+   QUOTE PAGE
+===================================================== */
+
+
+.quote-page{
+
+
+    background:#f5f9ff;
+
+
+    min-height:100vh;
+
+
+}
+
+
+
+/* =====================================================
+   QUOTE HEADER
+===================================================== */
+
+
+.quote-header{
+
+
+    width:min(92%,1400px);
+
+
+    margin:auto;
+
+
+    padding:
+
+    30px 0;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:space-between;
+
+
+}
+
+
+
+.quote-header img{
+
+
+    height:
+
+    70px;
+
+
+    object-fit:contain;
+
+
+}
+
+
+
+/* Back Home */
+
+
+.back-home{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:12px;
+
+
+    color:var(--primary);
+
+
+    font-weight:700;
+
+
+    transition:
+
+    var(--transition);
+
+
+}
+
+
+
+.back-home:hover{
+
+
+    transform:
+
+    translateX(-5px);
+
+
+}
+
+
+
+/* =====================================================
+   QUOTE SECTION
+===================================================== */
+
+
+.quote-section{
+
+
+    padding:
+
+    40px 0 100px;
+
+
+}
+
+
+
+.quote-container{
+
+
+    width:min(92%,1400px);
+
+
+    margin:auto;
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    1fr 1.1fr;
+
+
+    gap:
+
+    clamp(40px,7vw,70px);
+
+
+    align-items:center;
+
+
+}
+
+
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+
+
+.quote-left span{
+
+
+    color:var(--primary);
+
+
+    font-weight:700;
+
+
+    letter-spacing:1px;
+
+
+}
+
+
+
+.quote-left h1{
+
+
+    font-size:
+
+    clamp(2.2rem,5vw,3.2rem);
+
+
+    margin:
+
+    20px 0;
+
+
+    color:var(--dark);
+
+
+    line-height:1.2;
+
+
+}
+
+
+
+.quote-left p{
+
+
+    color:var(--gray);
+
+
+    line-height:
+
+    1.9;
+
+
+    margin-bottom:
+
+    40px;
+
+
+}
+
+
+
+/* =====================================================
+   CONTACT INFO
+===================================================== */
+
+
+.contact-info{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:20px;
+
+
+}
+
+
+
+.contact-info div{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:16px;
+
+
+    color:#334155;
+
+
+    font-weight:600;
+
+
+}
+
+
+
+.contact-info i{
+
+
+    width:48px;
+
+
+    height:48px;
+
+
+    border-radius:50%;
+
+
+    background:#e0ecff;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    color:var(--primary);
+
+
+}
+
+
+
+.contact-info a{
+
+
+    color:var(--primary);
+
+
+}
+
+
+
+/* =====================================================
+   FORM BOX
+===================================================== */
+
+
+.quote-form-box{
+
+
+    background:white;
+
+
+    padding:
+
+    clamp(30px,5vw,50px);
+
+
+    border-radius:
+
+    var(--radius-xl);
+
+
+    box-shadow:
+
+
+    0 20px 70px rgba(0,0,0,.08);
+
+
+}
+
+
+
+/* Form Grid */
+
+
+.quote-form-box form{
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+
+    gap:25px;
+
+
+}
+
+
+
+/* =====================================================
+   FORM GROUP
+===================================================== */
+
+
+.form-group{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+}
+
+
+
+.form-group label{
+
+
+    margin-bottom:
+
+    10px;
+
+
+    font-weight:700;
+
+
+    color:#334155;
+
+
+}
+
+
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+
+    width:100%;
+
+
+    border:
+
+    1px solid var(--border);
+
+
+    border-radius:16px;
+
+
+    padding:
+
+    16px 20px;
+
+
+    font-size:15px;
+
+
+    outline:none;
+
+
+    transition:
+
+    var(--transition);
+
+
+}
+
+
+
+.form-group textarea{
+
+
+    min-height:140px;
+
+
+    resize:vertical;
+
+
+}
+
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+
+    border-color:
+
+    var(--primary);
+
+
+    box-shadow:
+
+    0 0 0 4px rgba(29,78,216,.1);
+
+
+}
+
+
+
+/* Full Width */
+
+
+.full-width{
+
+
+    grid-column:
+
+    1 / -1;
+
+
+}
+
+
+
+/* =====================================================
+   SUBMIT BUTTON
+===================================================== */
+
+
+.submit-btn{
+
+
+    grid-column:
+
+    1 / -1;
+
+
+    border:none;
+
+
+    cursor:pointer;
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        #2563eb,
+
+        #1d4ed8
+
+    );
+
+
+    color:white;
+
+
+    padding:
+
+    18px;
+
+
+    border-radius:50px;
+
+
+    font-size:16px;
+
+
+    font-weight:700;
+
+
+    transition:
+
+    var(--transition);
+
+
+}
+
+
+
+.submit-btn:hover{
+
+
+    transform:
+
+    translateY(-3px);
+
+
+    box-shadow:
+
+    0 10px 25px rgba(29,78,216,.25);
+
+
+}
+
+
+
+/* =====================================================
+   QUOTE RESPONSIVE
+===================================================== */
+
+
+@media(max-width:992px){
+
+
+    .quote-container{
+
+
+        grid-template-columns:
+
+        1fr;
+
+
+    }
+
+
+    .quote-left{
+
+
+        text-align:center;
+
+
+    }
+
+
+    .contact-info{
+
+
+        align-items:center;
+
+
+    }
+
+
+}
+
+
+
+@media(max-width:700px){
+
+
+    .quote-header{
+
+
+        flex-direction:column;
+
+
+        gap:20px;
+
+
+    }
+
+
+    .quote-form-box form{
+
+
+        grid-template-columns:
+
+        1fr;
+
+
+    }
+
+
+
+    .full-width,
+    .submit-btn{
+
+
+        grid-column:auto;
+
+
+    }
+
+
+}
+
+/* =====================================================
+   CORE 4 PART A
+   BRANCH PAGE
+===================================================== */
+
+
+/* =====================================================
+   BRANCH PAGE
+===================================================== */
+
+
+.branch-page{
+
+
+    background:#f5f9ff;
+
+
+    min-height:100vh;
+
+
+    padding:
+
+    100px 20px;
+
+
+}
+
+
+
+/* =====================================================
+   BRANCH CONTAINER
+===================================================== */
+
+
+.branch-container{
+
+
+    width:min(92%,900px);
+
+
+    margin:auto;
+
+
+}
+
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+
+.back-btn{
+
+
+    display:inline-flex;
+
+
+    align-items:center;
+
+
+    gap:10px;
+
+
+    margin-bottom:30px;
+
+
+    color:var(--primary);
+
+
+    font-weight:700;
+
+
+    transition:
+
+    var(--transition);
+
+
+}
+
+
+
+.back-btn:hover{
+
+
+    transform:
+
+    translateX(-5px);
+
+
+}
+
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+
+.branch-container h1{
+
+
+    color:var(--dark);
+
+
+    font-size:
+
+    clamp(2rem,5vw,2.8rem);
+
+
+    line-height:1.2;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+/* =====================================================
+   BRANCH CARD
+===================================================== */
+
+
+.branch-card{
+
+
+    background:white;
+
+
+    padding:
+
+    clamp(25px,5vw,40px);
+
+
+    border-radius:
+
+    var(--radius-xl);
+
+
+    box-shadow:
+
+
+    0 10px 30px rgba(0,0,0,.08);
+
+
+    border:
+
+    1px solid rgba(219,234,254,.6);
+
+
+}
+
+
+
+/* =====================================================
+   BRANCH TEXT
+===================================================== */
+
+
+.branch-card p{
+
+
+    margin-bottom:25px;
+
+
+    font-size:18px;
+
+
+    line-height:1.8;
+
+
+    color:#334155;
+
+
+}
+
+
+
+/* ICON */
+
+
+.branch-card i{
+
+
+    width:35px;
+
+
+    color:var(--primary);
+
+
+}
+
+
+
+/* LINK */
+
+
+.branch-card a{
+
+
+    color:var(--primary);
+
+
+    font-weight:600;
+
+
+    transition:
+
+    var(--transition);
+
+
+}
+
+
+
+.branch-card a:hover{
+
+
+    color:#003bfe;
+
+
+}
+
+
+
+/* =====================================================
+   BRANCH LOGO
+===================================================== */
+
+
+.branch-logo{
+
+
+    width:
+
+    150px;
+
+
+    display:block;
+
+
+    margin:
+
+    25px auto;
+
+
+    object-fit:contain;
+
+
+}
+
+
+
+/* =====================================================
+   OPEN PDF BUTTON
+===================================================== */
+
+
+.open-pdf-btn{
+
+
+    display:inline-flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    gap:12px;
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        #2563eb,
+
+        #1d4ed8
+
+    );
+
+
+    color:white;
+
+
+    padding:
+
+    15px 30px;
+
+
+    border-radius:12px;
+
+
+    font-size:18px;
+
+
+    font-weight:600;
+
+
+    margin-top:30px;
+
+
+    transition:
+
+    var(--transition);
+
+
+}
+
+
+
+.open-pdf-btn:hover{
+
+
+    transform:
+
+    translateY(-3px);
+
+
+    box-shadow:
+
+
+    0 10px 25px rgba(0,0,0,.2);
+
+
+}
+
+
+
+/* =====================================================
+   BRANCH RESPONSIVE
+===================================================== */
+
+
+@media(max-width:600px){
+
+
+    .branch-page{
+
+
+        padding:
+
+        80px 15px;
+
+
+    }
+
+
+    .branch-card p{
+
+
+        font-size:16px;
+
+
+    }
+
+
+    .open-pdf-btn{
+
+
+        width:100%;
+
+
+    }
+
+
+}
+
+/* =====================================================
+   CORE 4 PART B
+   ABOUT PAGE + PDF VIEWER
+===================================================== */
+
+
+/* =====================================================
+   ABOUT PAGE
+===================================================== */
+
+
+.about-page{
+
+
+    background:#f5f7fb;
+    font-family:'Noto Sans Thai',sans-serif;
+
+
+
+}
+
+
+
+/* =====================================================
+   ABOUT HEADER
+===================================================== */
+
+
+.about-header{
+
+
+    position:fixed;
+
+
+    top:0;
+
+
+    left:0;
+
+
+    width:100%;
+
+
+    height:85px;
+
+
+    background:
+
+
+    rgba(255,255,255,.95);
+
+
+    backdrop-filter:
+
+
+    blur(15px);
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:space-between;
+
+
+    padding:
+
+    0 clamp(20px,5vw,70px);
+
+
+    z-index:999;
+
+
+    box-shadow:
+
+
+    0 5px 20px rgba(0,0,0,.08);
+
+
+}
+
+
+
+/* Logo */
+
+
+.about-logo img{
+
+
+    height:55px;
+
+
+    width:auto;
+
+
+    object-fit:contain;
+
+
+}
+
+
+
+/* Header Buttons */
+
+
+.about-header-right{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:15px;
+
+
+}
+
+
+
+/* =====================================================
+   ABOUT BUTTONS
+===================================================== */
+
+
+.download-btn,
+.back-home-btn{
+
+
+    padding:
+
+    12px 24px;
+
+
+    border-radius:50px;
+
+
+    font-weight:600;
+
+
+    transition:
+
+    var(--transition);
+
+
+}
+
+
+
+/* Download */
+
+
+.download-btn{
+
+
+    background:
+
+    var(--primary);
+
+
+    color:white;
+
+
+}
+
+
+
+.download-btn:hover{
+
+
+    background:#003bfe;
+
+
+    transform:
+
+    translateY(-2px);
+
+
+}
+
+
+
+/* Back */
+
+
+.back-home-btn{
+
+
+    background:#f1f5f9;
+
+
+    color:var(--primary);
+
+
+}
+
+
+
+.back-home-btn:hover{
+
+
+    background:#e2e8f0;
+
+
+}
+
+
+
+/* =====================================================
+   ABOUT HERO
+===================================================== */
+
+
+.about-hero{
+
+
+    height:
+
+    380px;
+
+
+    background-image:url(
+    'https://greenpowersolar.co.th/wp-content/uploads/2023/11/energy-research-institute-1440x900-1-1024x640-1.jpg'
+    );
+
+
+    background-size:cover;
+
+
+    background-position:center;
+
+
+    position:relative;
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+    text-align:center;
+
+
+}
+
+
+
+/* Overlay */
+
+
+.about-overlay{
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+    background:
+
+    rgba(8,20,48,.72);
+
+
+}
+
+
+
+/* Content */
+
+
+.about-content{
+
+
+    position:relative;
+
+
+    z-index:10;
+
+
+    color:white;
+
+
+    padding-top:70px;
+
+
+}
+
+
+
+/* Badge */
+
+
+.about-badge{
+
+
+    display:inline-flex;
+
+
+    align-items:center;
+
+
+    padding:
+
+    10px 28px;
+
+
+    background:
+
+    rgba(255,255,255,.15);
+
+
+    backdrop-filter:
+
+    blur(10px);
+
+
+    border-radius:50px;
+
+
+    margin-bottom:25px;
+
+
+    font-size:14px;
+
+
+    letter-spacing:2px;
+
+
+}
+
+
+
+/* Title */
+
+
+.about-content h1{
+
+
+    font-size:
+
+    clamp(2.3rem,5vw,3.6rem);
+
+
+    font-weight:800;
+
+
+    margin-bottom:20px;
+
+
+    line-height:1.2;
+
+
+}
+
+
+
+.about-content p{
+
+
+    font-size:
+
+    clamp(1rem,2vw,1.25rem);
+
+
+    opacity:.9;
+
+
+}
+
+
+
+/* =====================================================
+   PDF SECTION
+===================================================== */
+
+
+.pdf-section{
+
+
+    width:min(1400px,92%);
+
+
+    margin:
+
+    -80px auto 80px;
+
+
+    position:relative;
+
+
+    z-index:20;
+
+
+}
+
+
+
+/* PDF CARD */
+
+
+.pdf-card{
+
+
+    background:white;
+
+
+    border-radius:
+
+    30px;
+
+
+    overflow:hidden;
+
+
+    box-shadow:
+
+
+    0 20px 60px rgba(0,0,0,.15);
+
+
+}
+
+
+
+/* PDF Frame */
+
+
+.pdf-card iframe{
+
+
+    width:100%;
+
+
+    height:1400px;
+
+
+    border:none;
+
+
+    display:block;
+
+
+}
+
+
+
+/* =====================================================
+   OLD PDF CONTAINER SUPPORT
+===================================================== */
+
+
+.pdf-container{
+
+
+    width:100%;
+
+
+    height:100vh;
+
+
+    background:#f8fafc;
+
+
+}
+
+
+
+.pdf-container iframe{
+
+
+    width:100%;
+
+
+    height:calc(100vh - 80px);
+
+
+    border:none;
+
+
+}
+
+
+
+/* PDF Header */
+
+
+.pdf-header{
+
+
+    height:80px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:space-between;
+
+
+    padding:
+
+    0 clamp(20px,5vw,60px);
+
+
+    background:white;
+
+
+    box-shadow:
+
+
+    0 2px 10px rgba(0,0,0,.08);
+
+
+}
+
+
+
+.pdf-header h1{
+
+
+    color:var(--primary);
+
+
+    font-size:28px;
+
+
+}
+
+
+
+/* =====================================================
+   ABOUT RESPONSIVE
+===================================================== */
+
+
+@media(max-width:900px){
+
+
+    .about-header{
+
+
+        height:auto;
+
+
+        min-height:75px;
+
+
+    }
+
+
+    .about-header-right{
+
+
+        gap:8px;
+
+
+    }
+
+
+    .download-btn,
+    .back-home-btn{
+
+
+        padding:
+
+        10px 14px;
+
+
+        font-size:14px;
+
+
+    }
+
+
+    .about-content h1{
+
+
+        font-size:40px;
+
+
+    }
+
+
+    .pdf-card iframe{
+
+
+        height:800px;
+
+
+    }
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+    .about-header{
+
+
+        padding:
+
+        15px;
+
+
+    }
+
+
+    .about-logo img{
+
+
+        height:45px;
+
+
+    }
+
+
+    .about-header-right{
+
+
+        flex-direction:column;
+
+
+    }
+
+
+    .about-hero{
+
+
+        height:320px;
+
+
+    }
+
+
+    .pdf-section{
+
+
+        margin-top:-40px;
+
+
+    }
+
+
+}
+
+/* =====================================================
+   CORE 5 PART A
+   PRODUCT PAGE + PRODUCT CARD
+===================================================== */
+
+
+/* =====================================================
+   PRODUCT HEADER
+===================================================== */
+
+
+.product-header{
+
+
+    width:min(1400px,92%);
+
+
+    margin:auto;
+
+
+    padding:
+
+    40px 0;
+
+
+}
+
+
+
+.product-header a{
+
+
+    color:var(--primary);
+
+
+    font-weight:600;
+
+
+    transition:
+
+    var(--transition);
+
+
+}
+
+
+
+.product-header a:hover{
+
+
+    color:#003bfe;
+
+
+}
+
+
+
+.product-header h1{
+
+
+    margin-top:20px;
+
+
+    font-size:
+
+    clamp(2rem,5vw,2.8rem);
+
+
+    color:var(--dark);
+
+
+    line-height:1.2;
+
+
+}
+
+
+
+/* =====================================================
+   PRODUCT GRID
+===================================================== */
+
+
+.product-grid{
+
+
+    width:min(1400px,92%);
+
+
+    margin:auto;
+
+
+    padding-bottom:80px;
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(280px,1fr));
+
+
+    gap:30px;
+
+
+}
+
+
+
+/* =====================================================
+   PRODUCT CARD
+===================================================== */
+
+
+.product-card{
+
+
+    background:white;
+
+
+    border-radius:
+
+    var(--radius-lg);
+
+
+    overflow:hidden;
+
+
+    padding:30px;
+
+
+    box-shadow:
+
+
+    0 10px 30px rgba(0,0,0,.08);
+
+
+    transition:
+
+    var(--transition);
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+}
+
+
+
+.product-card:hover{
+
+
+    transform:
+
+    translateY(-8px);
+
+
+    box-shadow:
+
+
+    0 20px 45px rgba(0,0,0,.12);
+
+
+}
+
+
+
+/* =====================================================
+   PRODUCT IMAGE
+===================================================== */
+
+
+.product-card img{
+
+
+    width:100%;
+
+
+    height:240px;
+
+
+    object-fit:contain;
+
+
+    background:#ffffff;
+
+
+    border-radius:16px;
+
+
+    transition:
+
+    .4s ease;
+
+
+}
+
+
+
+.product-card:hover img{
+
+
+    transform:
+
+    scale(1.05);
+
+
+}
+
+
+
+/* =====================================================
+   PRODUCT CONTENT
+===================================================== */
+
+
+.product-card h3{
+
+
+    margin-top:20px;
+
+
+    color:#10254d;
+
+
+    font-size:22px;
+
+
+    line-height:1.4;
+
+
+}
+
+
+
+.product-card p{
+
+
+    margin-top:10px;
+
+
+    color:var(--gray);
+
+
+    line-height:1.8;
+
+
+    font-size:16px;
+
+
+}
+
+
+
+/* =====================================================
+   BRANCH LOGO
+===================================================== */
+
+
+.branch-logo{
+
+
+    width:150px;
+
+
+    display:block;
+
+
+    margin:
+
+    25px auto;
+
+
+    object-fit:contain;
+
+
+}
+
+
+
+/* =====================================================
+   OPEN PDF BUTTON
+===================================================== */
+
+
+.open-pdf-btn{
+
+
+    display:inline-flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    gap:12px;
+
+
+    background:
+
+
+    linear-gradient(
+
+        135deg,
+
+        #d7e3ff,
+
+        #e1e9ff
+
+    );
+
+
+    color:white;
+
+
+    padding:
+
+    15px 30px;
+
+
+    border-radius:12px;
+
+
+    font-size:18px;
+
+
+    font-weight:600;
+
+
+    margin-top:30px;
+
+
+    transition:
+
+    var(--transition);
+
+
+}
+
+
+
+.open-pdf-btn:hover{
+
+
+    transform:
+
+    translateY(-3px);
+
+
+    box-shadow:
+
+
+    0 10px 25px rgba(0,0,0,.2);
+
+
+}
+
+
+
+/* =====================================================
+   PRODUCT RESPONSIVE
+===================================================== */
+
+
+@media(max-width:600px){
+
+
+    .product-header{
+
+
+        padding:
+
+        30px 0;
+
+
+    }
+
+
+    .product-card{
+
+
+        padding:20px;
+
+
+    }
+
+
+    .product-card img{
+
+
+        height:200px;
+
+
+    }
+
+
+}
+
+/* =====================================================
+   CORE 5 PART B
+   PRODUCT SLIDER
+===================================================== */
+
+
+/* =====================================================
+   PRODUCT SLIDER CONTAINER
+===================================================== */
+
+
+.product-slider{
+
+
+    width:100%;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    gap:18px;
+
+
+    margin-top:40px;
+
+
+}
+
+
+
+/* =====================================================
+   SLIDER WRAPPER
+===================================================== */
+
+
+.slider-wrapper{
+
+
+    width:100%;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+/* =====================================================
+   SLIDER TRACK
+===================================================== */
+
+
+.slider-track{
+
+
+    display:flex;
+
+
+    gap:25px;
+
+
+    transition:
+
+    transform .45s ease;
+
+
+    will-change:transform;
+
+
+}
+
+
+
+/* =====================================================
+   SLIDER PRODUCT CARD
+===================================================== */
+
+
+/*
+   แยกจาก Product Page
+   เพื่อไม่ให้ Script Slider พัง
+*/
+
+
+.slider-track .product-card{
+
+
+    min-width:280px;
+
+
+    flex-shrink:0;
+
+
+    background:white;
+
+
+    border-radius:22px;
+
+
+    overflow:hidden;
+
+
+    padding:0;
+
+
+    box-shadow:
+
+
+    0 10px 35px rgba(0,0,0,.08);
+
+
+}
+
+
+
+/* Hover */
+
+
+.slider-track .product-card:hover{
+
+
+    transform:
+
+    translateY(-8px);
+
+
+}
+
+
+
+/* =====================================================
+   SLIDER IMAGE
+===================================================== */
+
+
+.slider-track .product-card img{
+
+
+    width:100%;
+
+
+    height:240px;
+
+
+    object-fit:cover;
+
+
+    background:#ffffff;
+
+
+    border-radius:0;
+
+
+}
+
+
+
+/* =====================================================
+   SLIDER TEXT
+===================================================== */
+
+
+.slider-track .product-card h3{
+
+
+    padding:
+
+    18px 22px 5px;
+
+
+    margin:0;
+
+
+    font-size:24px;
+
+
+    color:#10254d;
+
+
+}
+
+
+
+.slider-track .product-card p{
+
+
+    padding:
+
+    0 22px 22px;
+
+
+    margin:0;
+
+
+    color:#777;
+
+
+    line-height:1.7;
+
+
+}
+
+
+
+/* =====================================================
+   SLIDER BUTTON
+===================================================== */
+
+
+.slide-btn{
+
+
+    width:56px;
+
+
+    height:56px;
+
+
+    flex-shrink:0;
+
+
+    border:none;
+
+
+    border-radius:50%;
+
+
+    cursor:pointer;
+
+
+    background:#1E5BFF;
+
+
+    color:white;
+
+
+    font-size:22px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    transition:
+
+    var(--transition);
+
+
+    box-shadow:
+
+
+    0 8px 25px rgba(0,0,0,.18);
+
+
+}
+
+
+
+.slide-btn:hover{
+
+
+    background:#0f47dd;
+
+
+    transform:
+
+    translateY(-3px);
+
+
+}
+
+
+
+.slide-btn i{
+
+
+    pointer-events:none;
+
+
+}
+
+
+
+/* =====================================================
+   SLIDER RESPONSIVE
+===================================================== */
+
+
+@media(max-width:900px){
+
+
+    .product-slider{
+
+
+        gap:10px;
+
+
+    }
+
+
+
+    .slider-track .product-card{
+
+
+        min-width:
+
+        260px;
+
+
+    }
+
+
+
+    .slide-btn{
+
+
+        width:45px;
+
+
+        height:45px;
+
+
+        font-size:18px;
+
+
+    }
+
+
+}
+
+
+
+@media(max-width:600px){
+
+
+    .product-slider{
+
+
+        gap:5px;
+
+
+    }
+
+
+
+    .slider-track .product-card{
+
+
+        min-width:
+
+        85vw;
+
+
+    }
+
+
+
+    .slide-btn{
+
+
+        display:none;
+
+
+    }
+
+
+}
+
+/* =====================================================
+   CORE 6
+   FINAL RESPONSIVE + CSS CLEANUP
+===================================================== */
+
+
+/* =====================================================
+   GLOBAL MOBILE FIX
+===================================================== */
+
+
+html,
+body{
+
+
+    max-width:100%;
+
+
+    overflow-x:hidden;
+
+
+}
+
+
+
+.container,
+.product-grid,
+.project-grid,
+.footer-grid{
+
+
+    width:min(92%,1400px);
+
+
+}
+
+
+
+/* =====================================================
+   LARGE DESKTOP 1600px+
+===================================================== */
+
+
+@media(min-width:1600px){
+
+
+    .hero-text h1{
+
+
+        font-size:72px;
+
+
+    }
+
+
+
+    .hero-logo{
+
+
+        width:250px;
+
+
+    }
+
+
+}
+
+
+
+/* =====================================================
+   LAPTOP 1200px
+===================================================== */
+
+
+@media(max-width:1200px){
+
+
+    .navbar{
+
+
+        gap:15px;
+
+
+    }
+
+
+
+    .menu{
+
+
+        gap:18px;
+
+
+    }
+
+
+
+    .menu li a{
+
+
+        font-size:14px;
+
+
+    }
+
+
+
+    .hero-text{
+
+
+        max-width:650px;
+
+
+    }
+
+
+
+    .stats-box{
+
+
+        padding:35px;
+
+
+    }
+
+
+
+    .footer-grid{
+
+
+        grid-template-columns:
+
+        repeat(3,1fr);
+
+
+    }
+
+
+
+}
+
+
+
+/* =====================================================
+   TABLET 992px
+===================================================== */
+
+
+@media(max-width:992px){
+
+
+    /* Header */
+
+
+    .navbar{
+
+
+        min-height:80px;
+
+    }
+
+    .menu{
+
+
+        display:none;
+
+    }
+
+    .logo img{
+
+
+        height:50px;
+
+
+    }
+
+
+
+    .header-right{
+
+
+        gap:8px;
+
+
+    }
+
+
+
+
+    /* Hero */
+
+
+    .hero{
+
+
+        padding-top:120px;
+
+
+    }
+
+
+
+    .hero-text{
+
+
+        margin:auto;
+
+
+        text-align:center;
+
+
+    }
+
+
+
+    .hero-text p{
+
+
+        max-width:600px;
+
+
+        margin-left:auto;
+
+
+        margin-right:auto;
+
+
+    }
+
+
+
+
+    /* Stats */
+
+
+    .stats{
+
+
+        margin-top:-30px;
+
+
+    }
+
+
+
+    .stat-item{
+
+
+        justify-content:center;
+
+
+    }
+
+
+
+    /* Services */
+
+
+    .services-grid{
+
+
+        grid-template-columns:1fr;
+
+
+    }
+
+
+
+
+    /* Quote */
+
+
+    .quote-container{
+
+
+        grid-template-columns:1fr;
+
+
+    }
+
+
+}
+
+
+
+/* =====================================================
+   MOBILE 768px
+===================================================== */
+
+
+@media(max-width:768px){
+
+
+    /* General */
+
+
+    .container{
+
+
+        width:90%;
+
+
+    }
+
+
+
+
+    /* Header */
+
+
+    .header{
+
+
+        backdrop-filter:
+
+        blur(12px);
+
+
+    }
+
+
+
+    .navbar{
+
+
+        height:75px;
+
+
+    }
+
+
+
+    .logo img{
+
+
+        height:42px;
+
+
+    }
+
+
+
+
+    /* Hero */
+
+
+    .hero{
+
+
+        min-height:auto;
+
+
+        padding:
+
+        130px 0 80px;
+
+
+    }
+
+
+
+    .hero-logo{
+
+
+        width:130px;
+
+
+        opacity:.25;
+
+
+    }
+
+
+
+    .hero-text h1{
+
+
+        font-size:34px;
+
+
+    }
+
+
+
+    .hero-text p{
+
+
+        font-size:16px;
+
+
+    }
+
+
+
+    .hero-buttons{
+
+
+        flex-direction:column;
+
+
+        width:100%;
+
+
+    }
+
+
+
+    .primary-btn{
+
+
+        width:100%;
+
+
+    }
+
+
+
+
+    /* Stats */
+
+
+    .stats-box{
+
+
+        border-radius:25px;
+
+
+        padding:25px 20px;
+
+
+    }
+
+
+
+    .stat-item{
+
+
+        justify-content:flex-start;
+
+
+    }
+
+
+
+
+    /* Projects */
+
+
+    .projects h2{
+
+
+        font-size:36px;
+
+
+    }
+
+
+
+
+    /* Footer */
+
+
+    .footer-grid{
+
+
+        grid-template-columns:1fr;
+
+
+    }
+
+
+
+}
+
+
+
+/* =====================================================
+   SMALL MOBILE 480px
+===================================================== */
+
+
+@media(max-width:480px){
+
+
+
+    /* Header */
+
+
+    .header-right{
+
+
+        display:none;
+
+
+    }
+
+
+
+    .logo img{
+
+
+        height:38px;
+
+
+    }
+
+
+
+    /* Hero */
+
+
+    .badge{
+
+
+        font-size:12px;
+
+
+        padding:
+
+        8px 18px;
+
+
+    }
+
+
+
+    .hero-text h1{
+
+
+        font-size:30px;
+
+
+    }
+
+
+
+    .eng-title{
+
+
+        font-size:42px;
+
+
+    }
+
+
+
+
+    /* Cards */
+
+
+    .service-card{
+
+
+        padding:30px 20px;
+
+
+    }
+
+
+
+    .project-card img{
+
+
+        height:200px;
+
+
+    }
+
+
+
+    .product-card h3{
+
+
+        font-size:20px;
+
+
+    }
+
+
+
+
+    /* Quote */
+
+
+    .quote-form-box{
+
+
+        padding:25px 18px;
+
+
+    }
+
+
+
+
+    /* About */
+
+
+    .about-content h1{
+
+
+        font-size:32px;
+
+
+    }
+
+
+
+}
+
+
+
+/* =====================================================
+   ANIMATION CLEAN
+===================================================== */
+
+
+.service-card,
+.project-card,
+.product-card,
+.quote-form-box{
+
+
+    will-change:transform;
+
+
+}
+
+/* ===================================
+   FONT AWESOME FIX
+=================================== */
+
+
+.fa,
+.fas,
+.far,
+.fab,
+.fa-solid,
+.fa-regular,
+.fa-brands{
+
+    font-family:"Font Awesome 6 Free",
+    "Font Awesome 6 Brands" !important;
+
+}
+
+
+.fa-solid{
+
+    font-weight:900;
+
+}
+
+
+.fa-regular{
+
+    font-weight:400;
+
+}
+
+
+.fa-brands{
+
+    font-weight:400;
+
+}
+
+
+/* ===================================
+   RESTORE ORIGINAL FONT
+=================================== */
+
+
+body,
+button,
+input,
+textarea,
+select{
+
+    font-family:'Noto Sans Thai',sans-serif;
+
+}
+
+
+/* About Page */
+
+.about-page,
+.about-page button,
+.about-page input,
+.about-page textarea,
+.about-page select{
+
+    font-family:'Noto Sans Thai',sans-serif;
+
+}
+
+
+/* ===================================
+   FONT AWESOME FINAL FIX
+=================================== */
+
+
+/* Solid Icons */
+
+.fa-solid,
+.fas{
+
+    font-family:"Font Awesome 6 Free" !important;
+
+    font-weight:900;
+
+}
+
+
+
+/* Regular Icons */
+
+.fa-regular,
+.far{
+
+    font-family:"Font Awesome 6 Free" !important;
+
+    font-weight:400;
+
+}
+
+
+
+/* Brand Icons */
+
+.fa-brands,
+.fab{
+
+    font-family:"Font Awesome 6 Brands" !important;
+
+    font-weight:400;
+
+}
+
+/* ===================================
+   PRODUCT SECTION TITLE FIX
+=================================== */
+
+
+.portfolio{
+
+
+    padding:
+
+    100px 5%;
+
+
+}
+
+
+.portfolio h2{
+
+
+    color:#10254d;
+
+
+    font-size:
+
+    clamp(30px,4vw,48px);
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+.portfolio p{
+
+
+    color:#64748b;
+
+
+    font-size:18px;
+
+
+    line-height:1.8;
+
+
+}
+
+--------------------------
+
+/* ===================================
+   MOBILE SIDEBAR MENU
+=================================== */
+
+
+.mobile-menu-btn{
+
+    display:none;
+
+    border:none;
+
+    background:none;
+
+    font-size:26px;
+
+    color:#0f172a;
+
+    cursor:pointer;
+
+}
+
+
+
+.mobile-sidebar{
+
+
+    position:fixed;
+
+    top:0;
+
+    right:-320px;
+
+    width:300px;
+
+    height:100vh;
+
+    background:white;
+
+    z-index:2000;
+
+    padding:30px;
+
+    transition:.35s ease;
+
+    box-shadow:
+
+    -10px 0 40px rgba(0,0,0,.15);
+
+}
+
+
+
+.mobile-sidebar.active{
+
+    right:0;
+
+}
+
+
+
+.mobile-close{
+
+
+    border:none;
+
+    background:none;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    color:#0f172a;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.mobile-sidebar ul{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+
+
+.mobile-sidebar ul a{
+
+    color:#0f172a;
+
+    font-size:18px;
+
+    font-weight:600;
+
+}
+
+
+
+.mobile-overlay{
+
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    z-index:1500;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+}
+
+
+
+.mobile-overlay.active{
+
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+
+
+.mobile-social{
+
+
+    display:flex;
+
+    gap:12px;
+
+    margin-top:40px;
+
+}
+
+
+
+.mobile-social a{
+
+
+    width:38px;
+
+    height:38px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+}
+
+
+
+/* MOBILE ONLY */
+
+@media(max-width:992px){
+
+
+    .mobile-menu-btn{
+
+        display:block;
+
+    }
+
+
+    .menu,
+    .header-right{
+
+        display:none;
+
+    }
+
+}
+
+/* ปุ่ม 3 ขีด */
+.menu-toggle{
+    display:none;
+    font-size:30px;
+    background:none;
+    border:none;
+    cursor:pointer;
+}
+
+
+/* เมนูมือถือ */
+.mobile-menu{
+
+    display:none;
+    position:absolute;
+    top:70px;
+    right:0;
+
+    width:220px;
+
+    background:white;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+
+    padding:20px;
+
+}
+
+
+.mobile-menu a{
+
+    display:block;
+
+    padding:12px;
+
+    color:#003366;
+
+    text-decoration:none;
+
+}
+
+
+/* มือถือ */
+@media(max-width:768px){
+
+
+    .nav-menu{
+        display:none;
+    }
+
+
+    .menu-toggle{
+        display:block;
+    }
+
+
+    .mobile-menu.active{
+        display:block;
+    }
+
+}
+
+.mobile-dropdown{
+    width:100%;
+}
+
+
+.dropdown-btn{
+
+    width:100%;
+
+    padding:12px;
+
+    background:none;
+
+    border:none;
+
+    text-align:left;
+
+    font-size:16px;
+
+    color:#003366;
+
+    cursor:pointer;
+
+}
+
+
+.dropdown-content{
+
+    display:none;
+
+    padding-left:20px;
+
+}
+
+
+.dropdown-content a{
+
+    padding:10px;
+
+    display:block;
+
+    font-size:15px;
+
+}
+
+
+.mobile-dropdown.active 
+.dropdown-content{
+
+    display:block;
+
+}
+
+@media(max-width:768px){
+
+    .hero-logo{
+
+        position:absolute;
+
+        top:20px;
+
+        right:20px;
+
+        width:70px;
+
+        height:auto;
+
+        z-index:5;
+
+    }
+
+}
+
+/* ==========================
+   MOBILE PRODUCT SLIDER
+========================== */
+
+@media (max-width:768px){
+
+    .product-list,
+    .products-container,
+    .product-grid{
+
+        display:flex !important;
+
+        overflow-x:auto !important;
+
+        flex-wrap:nowrap !important;
+
+        gap:15px;
+
+        scroll-behavior:smooth;
+
+        padding-bottom:15px;
+
+    }
+
+
+    .product-card{
+
+        flex:0 0 auto !important;
+
+        width:260px;
+
+    }
+
+
+    .product-list::-webkit-scrollbar,
+    .products-container::-webkit-scrollbar,
+    .product-grid::-webkit-scrollbar{
+
+        display:none;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .slide-btn{
+
+        display:flex !important;
+
+        position:absolute;
+
+        top:50%;
+
+        transform:translateY(-50%);
+
+        width:40px;
+
+        height:40px;
+
+        border-radius:50%;
+
+        align-items:center;
+
+        justify-content:center;
+
+        z-index:20;
+
+    }
+
+    .prev{
+
+        left:5px;
+
+    }
+
+    .next{
+
+        right:5px;
+
+    }
+
+    .product-slider{
+
+        position:relative;
+
+    }
+
+}
+
+/* FIX PRODUCT IMAGE SIZE */
+
+.product-card {
+    width: 320px !important;
+    min-width: 320px !important;
+    height: 520px !important;
+}
+
+
+.product-card img {
+
+    width:100% !important;
+
+    height:380px !important;
+
+    object-fit:contain !important;
+
+    display:block;
+
+}
+
+
+/* ===================================
+   SOLAR PANEL CARD
+=================================== */
+
+.solar-card{
+
+    background:#ffffff;
+
+    border:1px solid #ffffff;
+
+    border-radius:24px;
+
+    padding:30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-start;   /* ให้อยู่ด้านบน */
+
+    align-items:center;           /* จัดกึ่งกลางแนวนอน */
+
+    min-height:500px;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+    box-shadow:
+        0 12px 35px rgba(15,23,42,.08);
+
+}
+
+/* ===================================
+   SOLAR CARD CONTENT
+=================================== */
+
+.solar-card{
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+
+}
+
+.solar-card img{
+
+    width:180px;
+    max-width:100%;
+    height:auto;
+
+    margin:0 auto 20px;
+
+    object-fit:contain;
+
+    flex-shrink:0;
+
+}
+
+.solar-card h3{
+
+    width:100%;
+
+    margin:0 0 18px;
+
+    text-align:center;
+
+    color:#10254d;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    flex-shrink:0;
+
+}
+
+.solar-card p{
+
+    width:100%;
+
+    margin:0;
+
+    color:#64748b;
+
+    line-height:1.8;
+
+    font-size:16px;
+
+}
+
+/* ===================================
+   SOLAR GRID
+=================================== */
+
+.solar-grid{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:0 80px 80px;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+/* ===================================
+   SOLAR PANEL RESPONSIVE
+=================================== */
+
+@media (max-width: 768px){
+
+    .solar-grid{
+
+        grid-template-columns:1fr;
+
+        padding:20px;
+
+        gap:24px;
+
+    }
+
+    .solar-card{
+
+        width:100%;
+
+        min-height:auto;
+
+        padding:24px;
+
+    }
+
+    .solar-card img{
+
+        width:180px;
+
+        max-width:100%;
+
+        margin:0 auto 20px;
+
+    }
+
+    .solar-card h3{
+
+        font-size:30px;
+
+        margin-bottom:15px;
+
+    }
+
+    .solar-card p{
+
+        font-size:17px;
+
+        line-height:1.9;
+
+        word-break:break-word;
+
+    }
+
+}
+
+.solar-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:0 80px 80px;
+
+}
+
+/* ===================================
+   SOLAR MOBILE SLIDER
+=================================== */
+
+@media (max-width:768px){
+
+    .solar-grid{
+
+        display:flex;
+
+        overflow-x:auto;
+
+        overflow-y:hidden;
+
+        flex-wrap:nowrap;
+
+        gap:18px;
+
+        padding:20px;
+
+        scroll-snap-type:x mandatory;
+
+        -webkit-overflow-scrolling:touch;
+
+    }
+
+    .solar-grid::-webkit-scrollbar{
+
+        display:none;
+
+    }
+
+    .solar-card{
+
+    flex:0 0 88%;
+    width:88%;
+    min-width:88%;
+
+    scroll-snap-align:start;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+
+    min-height:auto;
+
+    padding:24px;
+
+}
+
+    .solar-card img{
+
+        width:180px;
+
+        margin:auto;
+
+    }
+
+}
+
+/* ==========================================
+   FIX DESKTOP MODE ON PHONE
+========================================== */
+
+@media (min-width:769px){
+
+    .menu{
+        display:flex !important;
+    }
+
+    .nav-menu{
+        display:flex !important;
+    }
+
+    .header-right{
+        display:flex !important;
+    }
+
+    .mobile-menu-btn,
+    .menu-toggle,
+    .mobile-menu,
+    .mobile-sidebar{
+
+        display:none !important;
+
+    }
+
+}
